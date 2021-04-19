@@ -104,3 +104,15 @@ public class remote implements ObjectFactory, Serializable {
 - [用友NC反序列化 简单分析](https://blog.sari3l.com/posts/608d18f0/#jwdp)
 - [用友nc6.5详细安装过程](https://blog.csdn.net/weixin_38766356/article/details/103983787)
 
+## 一：WALL_LISTS
+
+### 1x01：使用方法
+- SwitchyOmega
+    - auto switch
+    - 规则列表设置 -> AutoProxy
+    - 规则列表网址  -> `https://raw.githubusercontent.com/Bin4xin/bigger-than-bigger/master/WALL_LISTS/lists.txt`
+    - 立即更新
+
+### 1x02：参考链接
+
+- *[gfwlist/gfwlist](https://github.com/gfwlist/gfwlist)*
