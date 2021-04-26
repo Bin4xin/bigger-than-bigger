@@ -44,3 +44,15 @@
 ## 二：Bin4wvsDocker
 
 ### 2x01：🚧UNDER CONSTRUCTION🚧
+
+## 三：*Collection of verified vulnerabilities*
+
+- *C(ollection) O(f) V(erified) V(ulnerabilities)*
+    - 记录已复现所有web、中间件相关漏洞、payload
+    - 洞察相关漏洞、payload的产生原因、区别
+    - *power by Bin4xin*
+    
+### [*Apache Solr Rce cve-2019-0193*](https://github.com/Bin4xin/bigger-than-bigger/tree/master/CoVV/ApacheSolr)
+- *2021年 4月26日 星期一 14时19分21秒 CST / Mon, 26 Apr 2021 14:19:10 +0800*
+
+
