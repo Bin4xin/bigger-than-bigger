@@ -1,0 +1,8 @@
+version: '2'
+services:
+  jellyfin:
+    build: .
+    ports:
+      - "8096:8096"
+    volumes:
+      - ./files:/media
