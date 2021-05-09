@@ -1,4 +1,4 @@
-# *jellyfin : base on docker*
+# [*jellyfin : base on docker*](https://github.com/Bin4xin/bigger-than-bigger/tree/master/Bin4llDocker/Jellyfin)
 
 ## 使用方法
 
