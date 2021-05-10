@@ -75,7 +75,7 @@ return row;
 </dataConfig>
 ```
 
-![](assets/solr-RCE-echo-out.png)
+![](../../assets/solr-RCE-echo-out.png)
 
 
 ### # 无回显payload
@@ -123,7 +123,7 @@ return row;
 ### # 区别
 左边无回显，右边有回显
 
-![](assets/solr-payload-difference.png)
+![](../../assets/solr-payload-difference.png)
 
 ### 参考
 
