@@ -12,8 +12,9 @@
 ## 零：用友nc6.5反序列化依赖jar包
 
 - 部分依赖jar包在安装完nc6.5系统后，一般在`C://yonyou//home//lib//`目录下，前提需要有nc6.5的安装包；或者下载仓库内的依赖包：
-    - *[点击以了解yonyou-nc6.5-lib](https://github.com/Bin4xin/bigger-than-bigger/tree/yonyou-ncv6.5/yonyou-nc6.5-lib/README.MD)*
+    - *[点击以了解yonyou-nc6.5-lib](https://github.com/Bin4xin/bigger-than-bigger/blob/master/yonyou-nc6.5-lib/README.MD)*
         - 本机运行环境
+        
         ```
         java version "1.8.0_181"
         Java(TM) SE Runtime Environment (build 1.8.0_181-b13)
@@ -21,6 +22,7 @@
 
         javac 1.8.0_181
         ```
+      
 - 学习教程[*README*](https://github.com/Bin4xin/bigger-than-bigger/blob/master/yonyou-nc6.5-lib/README.MD)
 
 ### 0x01：下载
