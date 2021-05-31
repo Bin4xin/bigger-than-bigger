@@ -1,11 +1,13 @@
 ## *CNVD编号：CNVD-C-2021-127844 - 浪潮ClusterEngine V4.0存在逻辑缺陷漏洞*
 
+具体博文：[浪潮ClusterEngineV4.0代码审计历程](https://about.sentrylab.cn/help/inspur-Cluster-Engine-V4.0-code-aduit-walkthrough/)
+
 - 2021年 5月21日 星期日 00时11分58秒 CST
     - 最近一直在看代码，正好前两天在网上冲浪的时候看到浪潮的一个RCE，就拿过来分析一下试试看
-- CST
-    - 上传相关代码
+- 2021年 5月31日 星期一 22时55分49秒 CST
+    - 上传相关代码至[*bigger-than-bigger*仓库：点击查看相关代码](https://github.com/Bin4xin/bigger-than-bigger/tree/master/CoVV/Inspur%20Cluster%20Engine%20v4)
 
-先看`web.xml`定义的servlet；
+`web.xml`定义的servlet；
 ```xml
 <servlet>
     <servlet-name>login</servlet-name>
@@ -14,3 +16,6 @@
     </servlet-class>
 </servlet>
 ```
+我个人不太喜欢贴大段代码，自己写着累，看的人也累，因为代码只更像是我们生活中聊天时候的互动手势，一定是辅助作用而不是表达主题；于是我便大致画了一下我理解的web认证Java代码跳转逻辑，方便理解：
+
+![](../../assets/inspur-code-running-logic.png)
