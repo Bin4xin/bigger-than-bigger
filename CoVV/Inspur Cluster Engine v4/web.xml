@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+    <!-- 数据库连接配置 -->
+    <context-param>
+        <param-name>jdbc_driver</param-name>
+        <param-value>com.mysql.jdbc.Driver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jdbc_url</param-name>
+        <param-value>jdbc:mysql://localhost:8889/tsce?characterEncoding=gbk</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jdbc_user</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jdbc_passwd</param-name>
+        <param-value>152497</param-value>
+    </context-param>
+    <context-param>
+        <param-name>pool_maxPoolSize</param-name>
+        <param-value>100</param-value>
+    </context-param>
+    <context-param>
+        <param-name>pool_minPoolSize</param-name>
+        <param-value>1</param-value>
+    </context-param>
+    <context-param>
+        <param-name>pool_initialPoolSize</param-name>
+        <param-value>2</param-value>
+    </context-param>
+    <context-param>
+        <param-name>pool_maxIdleTime</param-name>
+        <!--		<param-value>25000</param-value>-->
+        <param-value>40</param-value>
+    </context-param>
+    <context-param>
+        <param-name>pool_acquireIncrement</param-name>
+        <param-value>3</param-value>
+    </context-param>
+    <context-param>
+        <param-name>pool_maxStatementsPerConnection</param-name>
+        <param-value>50</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>HADOOP_HOST</param-name>
+        <param-value>http://192.168.56.104</param-value>
+    </context-param>
+
+    <!-- 工程启动加载-->
+    <listener>
+        <listener-class>
+            com.inspur.tsce4.utils.TSCEInit
+        </listener-class>
+    </listener>
+
+    <!-- 功能模块  -->
+    <servlet>
+        <servlet-name>configModule</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.configModule.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>configModule</servlet-name>
+        <url-pattern>/configModule</url-pattern>
+    </servlet-mapping>
+
+    <!-- license模块  -->
+    <servlet>
+        <servlet-name>license</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.license.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>license</servlet-name>
+        <url-pattern>/license</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>licenseUpload</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.license.LicenseUpload
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>licenseUpload</servlet-name>
+        <url-pattern>/licenseUpload</url-pattern>
+    </servlet-mapping>
+
+    <!-- 自定义监控  -->
+    <servlet>
+        <servlet-name>monCustom</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.monCustom.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>monCustom</servlet-name>
+        <url-pattern>/monCustom</url-pattern>
+    </servlet-mapping>
+
+    <!-- 监控  -->
+
+    <!-- 监控  -->
+    <servlet>
+        <servlet-name>monPhysicalView</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.monPhysicalView.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>monPhysicalView</servlet-name>
+        <url-pattern>/monPhysicalView</url-pattern>
+    </servlet-mapping>
+
+    <!-- 监控  -->
+    <!-- 监控  -->
+    <servlet>
+        <servlet-name>monDashboard</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.monDashboard.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>monDashboard</servlet-name>
+        <url-pattern>/monDashboard</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- 监控  -->
+    <servlet>
+        <servlet-name>login</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.login.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>login</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <!-- 监控  -->
+    <servlet>
+        <servlet-name>monOverview</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.monOverview.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>monOverview</servlet-name>
+        <url-pattern>/monOverview</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>monNodelist</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.monNodelist.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>monNodelist</servlet-name>
+        <url-pattern>/monNodelist</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>monNodeDetail</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.monNodeDetail.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>monNodeDetail</servlet-name>
+        <url-pattern>/monNodeDetail</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>monHotview</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.monHotview.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>monHotview</servlet-name>
+        <url-pattern>/monHotview</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>monJoblist</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.monJoblist.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>monJoblist</servlet-name>
+        <url-pattern>/monJoblist</url-pattern>
+    </servlet-mapping>
+
+    <!-- 报警 -->
+    <servlet>
+        <servlet-name>alarmConfig</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.alarmConfig.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>alarmConfig</servlet-name>
+        <url-pattern>/alarmConfig</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>alarmInfo</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.alarmInfo.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>alarmInfo</servlet-name>
+        <url-pattern>/alarmInfo</url-pattern>
+    </servlet-mapping>
+
+    <!-- 报警 -->
+    <servlet>
+        <servlet-name>jobCurrent</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.jobCurrent.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>jobCurrent</servlet-name>
+        <url-pattern>/jobCurrent</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>jobHistory</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.jobHistory.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>jobHistory</servlet-name>
+        <url-pattern>/jobHistory</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>jobSubmit</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.jobSubmit.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>jobSubmit</servlet-name>
+        <url-pattern>/jobSubmit</url-pattern>
+    </servlet-mapping>
+
+    <!-- 系统 -->
+    <servlet>
+        <servlet-name>sysGroup</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.sysGroup.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sysGroup</servlet-name>
+        <url-pattern>/sysGroup</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>sysUser</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.sysUser.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sysUser</servlet-name>
+        <url-pattern>/sysUser</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>sysFile</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.sysFile.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sysFile</servlet-name>
+        <url-pattern>/sysFile</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>uploadServlet</servlet-name>
+        <servlet-class>com.inspur.tsce4.sysFile.UploadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>uploadServlet</servlet-name>
+        <url-pattern>/uploadServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>sysStorage</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.sysStorage.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sysStorage</servlet-name>
+        <url-pattern>/sysStorage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>sysShell</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.sysShell.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sysShell</servlet-name>
+        <url-pattern>/sysShell</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>sysRemote</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.sysRemote.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sysRemote</servlet-name>
+        <url-pattern>/sysRemote</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>downLoadServlet</servlet-name>
+        <servlet-class>com.inspur.tsce4.sysRemote.DownLoadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>downLoadServlet</servlet-name>
+        <url-pattern>/downLoadServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 记账 -->
+    <servlet>
+        <servlet-name>acctMgrServlet</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.accountMgr.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>acctMgrServlet</servlet-name>
+        <url-pattern>/acctMgrServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>clusterReport</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.clusterReport.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>clusterReport</servlet-name>
+        <url-pattern>/clusterReport</url-pattern>
+    </servlet-mapping>
+
+    <!-- 智能负载 -->
+    <servlet>
+        <servlet-name>inteliLoad</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.inteliLoad.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>inteliLoad</servlet-name>
+        <url-pattern>/inteliLoad</url-pattern>
+    </servlet-mapping>
+
+    <!-- 特征数据 -->
+    <servlet>
+        <servlet-name>teyeMonitor</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.teyeMonitor.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>teyeMonitor</servlet-name>
+        <url-pattern>/teyeMonitor</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>teyeExport</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.teyeExport.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>teyeExport</servlet-name>
+        <url-pattern>/teyeExport</url-pattern>
+    </servlet-mapping>
+
+    <!-- 调度策略 -->
+    <servlet>
+        <servlet-name>scheQueue</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.scheQueue.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>scheQueue</servlet-name>
+        <url-pattern>/scheQueue</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>schePolicy</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.schePolicy.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>schePolicy</servlet-name>
+        <url-pattern>/schePolicy</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>scheResource</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.scheResource.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>scheResource</servlet-name>
+        <url-pattern>/scheResource</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>workstation</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.workstation.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>workstation</servlet-name>
+        <url-pattern>/workstation</url-pattern>
+    </servlet-mapping>
+    <!-- 大数据 -->
+    <servlet>
+        <servlet-name>hadoop</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.hadoop.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>hadoop</servlet-name>
+        <url-pattern>/hadoop</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>spark</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.spark.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>spark</servlet-name>
+        <url-pattern>/spark</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
+    <!-- 移动web begin-->
+    <servlet>
+        <servlet-name>mobileResourceServlet</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.mobileResource.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>mobileResourceServlet</servlet-name>
+        <url-pattern>/mobileResourceServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>mobileAlarmServlet</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.mobileAlarm.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>mobileAlarmServlet</servlet-name>
+        <url-pattern>/mobileAlarmServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>mobileJobServlet</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.mobileJob.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>mobileJobServlet</servlet-name>
+        <url-pattern>/mobileJobServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>mobileAcctServlet</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.mobileAccount.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>mobileAcctServlet</servlet-name>
+        <url-pattern>/mobileAcctServlet</url-pattern>
+    </servlet-mapping>
+    <!-- 移动web end-->
+
+    <servlet>
+        <servlet-name>appModel</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.appModel.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>appModel</servlet-name>
+        <url-pattern>/appModel</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>aiAppTasksSubmit</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.aiAppTasksSubmit.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>aiAppTasksSubmit</servlet-name>
+        <url-pattern>/aiAppTasksSubmit</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>aiAppTasksManage</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.aiAppTasksManage.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>aiAppTasksManage</servlet-name>
+        <url-pattern>/aiAppTasksManage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>aiAcctMgrServlet</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.aiAccountMgr.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>aiAcctMgrServlet</servlet-name>
+        <url-pattern>/aiAcctMgrServlet</url-pattern>
+    </servlet-mapping>
+    <!-- 镜像管理-->
+    <servlet>
+        <servlet-name>aiImagesManage</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.aiImagesManage.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>aiImagesManage</servlet-name>
+        <url-pattern>/aiImagesManage</url-pattern>
+    </servlet-mapping>
+    <!-- 镜像管理结束  -->
+
+
+
+    <!-- gpu整体监控-->
+    <servlet>
+        <servlet-name>aiGPUMonitor</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.aiGPUMonitor.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>aiGPUMonitor</servlet-name>
+        <url-pattern>/aiGPUMonitor</url-pattern>
+    </servlet-mapping>
+    <!-- gpu整体监控  -->
+
+
+    <!-- gpu节点监控-->
+    <servlet>
+        <servlet-name>aiGPUServers</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.aiGPUServers.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>aiGPUServers</servlet-name>
+        <url-pattern>/aiGPUServers</url-pattern>
+    </servlet-mapping>
+    <!-- gpu节点监控  -->
+
+
+
+    <!-- gpu节点详细信息-->
+    <servlet>
+        <servlet-name>aiGPUDetail</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.aiGPUDetail.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>aiGPUDetail</servlet-name>
+        <url-pattern>/aiGPUDetail</url-pattern>
+    </servlet-mapping>
+    <!-- gpu节点详细信息  -->
+
+    <!-- 程序分析-->
+    <servlet>
+        <servlet-name>aiAnalysis</servlet-name>
+        <servlet-class>
+            com.inspur.tsce4.analysis.Servlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>aiAnalysis</servlet-name>
+        <url-pattern>/aiAnalysis</url-pattern>
+    </servlet-mapping>
+    <!-- gpu节点详细信息  -->
+
+    <!-- 全局设置 -->
+    <session-config>
+        <session-timeout>0</session-timeout>
+    </session-config>
+
+    <!-- 首页 -->
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+</web-app>
