@@ -1,4 +1,4 @@
-## *CNVD编号：CNVD-C-2021-127844 - 浪潮ClusterEngine V4.0存在逻辑缺陷漏洞*
+## *CNVD-2021-39845 - 浪潮ClusterEngine V4.0存在逻辑缺陷漏洞*
 
 具体博文：[浪潮ClusterEngineV4.0代码审计历程](https://about.sentrylab.cn/help/inspur-Cluster-Engine-V4.0-code-aduit-walkthrough/)
 
