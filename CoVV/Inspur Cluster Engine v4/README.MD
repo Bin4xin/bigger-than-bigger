@@ -5,7 +5,7 @@
 - 2021年 5月21日 星期日 00时11分58秒 CST
     - 最近一直在看代码，正好前两天在网上冲浪的时候看到浪潮的一个RCE，就拿过来分析一下试试看
 - 2021年 5月31日 星期一 22时55分49秒 CST
-    - 上传相关代码至[*bigger-than-bigger*仓库：点击查看相关代码](https://github.com/Bin4xin/bigger-than-bigger/tree/master/CoVV/Inspur%20Cluster%20Engine%20v4)
+    - 上传相关代码至[*bigger-than-bigger*仓库：点击查看相关代码](https://github.com/Bin4xin/bigger-than-bigger/tree/master/CoVV/Inspur%20Cluster%20Engine%20v4/java%20code)
 
 `web.xml`定义的servlet；
 ```xml
