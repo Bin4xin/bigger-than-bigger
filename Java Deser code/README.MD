@@ -4,6 +4,7 @@
 ➜ ll
 drwxr-xr-x   5 bin4xin  staff   160  6  9 09:44 ./
 drwxr-xr-x  12 bin4xin  staff   384  6  9 09:37 ../
+-rw-r--r--   1 bin4xin  staff  1082  6  9 09:36 Test.java
 -rw-r--r--   1 bin4xin  staff   369  6  8 14:44 People.java
 -rw-r--r--   1 bin4xin  staff   573  6  9 09:44 README.MD
 ➜ javac Test.java
