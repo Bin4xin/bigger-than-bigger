@@ -11,6 +11,15 @@ curl http://192.168.1.1:991/solr/admin/cores\?wt\=json
 
 - http://192.168.1.1:991/solr/core1/dataimport
 - http://192.168.1.1:991/solr/us_series/dataimport
+- 有回显：
+    - 找到利用核心 -> payload写入 -> RCE
+    - [*点击以进一步了解*](https://github.com/Bin4xin/bigger-than-bigger/blob/master/CoVV/ApacheSolr/README.MD#-%E6%9C%89%E5%9B%9E%E6%98%BEpayload)
+- 无回显：
+    - 找到利用核心 -> payload写入 -> RCE
+    - [*点击以进一步了解*](https://github.com/Bin4xin/bigger-than-bigger/blob/master/CoVV/ApacheSolr/README.MD#-%E6%97%A0%E5%9B%9E%E6%98%BEpayload)
+
+### # 1x01 恶意xml引用
+引用地址`(https://raw.githubusercontent.com/Bin4xin/bigger-than-bigger/master/CoVV/ApacheSolr/solr.xml)`
 
 ### # 有回显payload
 

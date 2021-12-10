@@ -1,6 +1,6 @@
 # Hikvision-BinConfigurationFiles-decrypter
 
-- [About Link](https://about.sentrylab.cn/help/Hikvision-BinConfigurationFiles-decrypter/)
+- [About Link](https://bin4xin.sentrylab.cn/about/Hikvision-BinConfigurationFiles-decrypter/)
 
 <h4><li>下载账号密码配置文件 <code>http://{ip.addr:ip.port}/System/configurationFile?auth=YWRtaW46MTEK</code></li></h4>
 
