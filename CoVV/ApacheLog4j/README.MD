@@ -23,15 +23,15 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.181-b13, mixed mode)
 
 ```java
   @PostMapping({"/hello"})
-  public String hello(String payload) {
-    System.setProperty("com.sun.jndi.ldap.object.trustURLCodebase", "true");
-    System.setProperty("com.sun.jndi.rmi.object.trustURLCodebase", "true");
-    logger.error("{}", payload);
-    logger.info("{}", payload);
-    logger.info(payload);
-    logger.error(payload);
-    return "ok";
-  }
+public String hello(String payload) {
+        System.setProperty("com.sun.jndi.ldap.object.trustURLCodebase", "true");
+        System.setProperty("com.sun.jndi.rmi.object.trustURLCodebase", "true");
+        logger.error("{}", payload);
+        logger.info("{}", payload);
+        logger.info(payload);
+        logger.error(payload);
+        return "ok";
+        }
 ```
 
 访问路由为hello，post`payload`参数；
@@ -85,6 +85,8 @@ Serving HTTP on :: port 80 (http://[::]:80/) ...
 - 目前暂时只知道jdk高版本会报错：`[main] ERROR log4j - Reference Class Name: foo`
 
 这里本人没有测试，可以移步自行分析版本限制[bilibili @GCC酱_0ff1c1a1 Log4j2 漏洞风险演示与个人看法](https://www.bilibili.com/video/BV15Q4y1e7jZ)，也欢迎贡献本仓库。
+
+- [更多限制请移步博客](https://bin4xin.sentrylab.cn/about/Apache-Log4j-RCE-WalkThrough/)
 
 ## 代码及参考
 
