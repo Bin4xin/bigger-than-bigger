@@ -1,8 +1,17 @@
-# Apache Log4j RCE
+## [Apache Log4j-v2.14-1 RCE](https://github.com/Bin4xin/bigger-than-bigger/tree/master/CoVV/ApacheLog4j)
 
-## 环境准备
+#### 环境准备
 
-- 仓库中demo.jar(更接近实际渗透环境) 或者[idea代码直接调试](https://github.com/tangxiaofeng7/apache-log4j-poc/)
+- 标题仓库中demo.jar(更接近实际渗透环境)
+- 或者[<del>idea代码直接调试</del>](https://github.com/tangxiaofeng7/apache-log4j-poc/)
+    - *Tips:2021-12-21更新*：
+    - 仓库作者已删除，我这里仓库重新上传了一份，[apache-log4j-poc](https://github.com/Bin4xin/bigger-than-bigger/tree/master/CoVV/ApacheLog4j/apache-log4j-poc)
+
+```
+[apache-log4j-poc]-git:(main)>git remote -v
+origin	https://github.com/tangxiaofeng7/apache-log4j-poc.git (fetch)
+origin	https://github.com/tangxiaofeng7/apache-log4j-poc.git (push)
+```
 
 > 值得注意的是：@apache-log4j-poc仓库中的截图poc代码为缺省`127.0.0.1`，我本地并未成功，需调整为网卡监听局域网地址如`192.168.x.x`
 
