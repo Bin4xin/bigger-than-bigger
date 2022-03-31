@@ -125,7 +125,7 @@ Content-Length: 64
 </RDF>
 ```
 
-![2022-03-21-4.31.42.png](https://image.yjs2635.xyz/images/2022/03/31/2022-03-21-4.31.42.png)
+<img src="https://image.yjs2635.xyz/images/2022/03/31/2022-03-21-4.31.42.png" alt="2022-03-21-4.31.42.png" border="0" />
 
 ### # 无回显payload
 
