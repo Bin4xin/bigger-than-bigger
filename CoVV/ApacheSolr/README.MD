@@ -125,11 +125,11 @@ Content-Length: 64
 </RDF>
 ```
 
-<img src="https://image.yjs2635.xyz/images/2022/03/31/2022-03-21-4.31.42.png" style='width: 100%'/>
+<a><img src="https://image.yjs2635.xyz/images/2022/03/31/2022-03-21-4.31.42.png" style='width: 100%'/></a>
 
-<a><img src="https://user-images.githubusercontent.com/6628666/75466330-fe1d0c00-59c4-11ea-91ba-506f60ef8af4.png" style='width: 100%'/></a>
+[comment]: <> (<a><img src="https://user-images.githubusercontent.com/6628666/75466330-fe1d0c00-59c4-11ea-91ba-506f60ef8af4.png" style='width: 100%'/></a>)
 
-<a href="https://g2.antv.vision/zh/examples/gallery"><img src="https://user-images.githubusercontent.com/6628666/75466330-fe1d0c00-59c4-11ea-91ba-506f60ef8af4.png" style='width: 100%'/></a>
+[comment]: <> (<a href="https://g2.antv.vision/zh/examples/gallery"><img src="https://user-images.githubusercontent.com/6628666/75466330-fe1d0c00-59c4-11ea-91ba-506f60ef8af4.png" style='width: 100%'/></a>)
 
 [comment]: <> (f4ck!)
 
