@@ -642,11 +642,11 @@
 *://zzpr0371.com/*
 *://zzyyo.com/*
 title/.* - 小.(百科|知识)网$/
-# anyway.
-*://cxybb.com/*
-*://4k8k.xyz/*
-*://cxymm.net/*
-*://its404.com/*
-*://its201.com/*
-*://its*.com/*
-# *://its301.com/*
+# anyway. all above from @YeSilin/uBlacklist visit https://github.com/YeSilin/uBlacklist
+*://*.cxybb.com/*
+*://*.4k8k.xyz/*
+*://*.cxymm.net/*
+*://*.its*.com/*
+# try to detected any subdomain. And any father domain such like:
+# domain123.com, domain1234.com instead of domain*.com ;)
+# let's go and look how it work.
