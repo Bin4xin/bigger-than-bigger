@@ -644,9 +644,13 @@
 title/.* - 小.(百科|知识)网$/
 # anyway. all above from @YeSilin/uBlacklist visit https://github.com/YeSilin/uBlacklist
 *://*.cxybb.com/*
+*://cxybb*.com/*
 *://*.4k8k.xyz/*
+*://4k8k*.xyz/*
 *://*.cxymm.net/*
+*://cxymm*.net/*
 *://*.its*.com/*
+*://its*.com/*
 # try to detected any subdomain. And any father domain such like:
 # domain123.com, domain1234.com instead of domain*.com ;)
 # let's go and look how it work.
