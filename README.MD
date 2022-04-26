@@ -28,7 +28,9 @@
         - [more...](https://github.com/Bin4xin/bigger-than-bigger/blob/master/CoVV/README.MD)
 - 4x01、*CTF*
     - 个人CTF比赛复盘文件共享；更多请[点击此处](https://github.com/Bin4xin/bigger-than-bigger/tree/master/CTF)了解。
-- 5x01、Future...
+- 5x01、*uBlacklist_LISTS*
+    - 来源：[@YeSilin/uBlacklist](https://github.com/YeSilin/uBlacklist){:target="_blank"}
+    - 订阅更新：`https://raw.githubusercontent.com/Bin4xin/bigger-than-bigger/master/uBlacklist_LISTS/lists.txt`
 
 # 注意/ATTENTION PLZ!!!
 
