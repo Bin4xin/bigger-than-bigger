@@ -651,6 +651,16 @@ title/.* - 小.(百科|知识)网$/
 *://cxymm*.net/*
 *://*.its*.com/*
 *://its*.com/*
+*://www.its404.com/*
+*://its201.com/*
+*://its301.com/*
+*://its401.com/*
+*://i4k.xyz/*
+*://www.its304.com/*
+*://www.its203.com/*
+*://its304.com/*
+*://www.pianshen.com/*
+*://www.freesion.com/*
 # try to detected any subdomain. And any father domain such like:
 # domain123.com, domain1234.com instead of domain*.com ;)
 # let's go and look how it work.
