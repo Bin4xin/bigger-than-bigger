@@ -18,7 +18,7 @@
 
 ## 目录
 
-### 0x01、用友nc6.5反序列化依赖jar包快速
+### 0x01、用友nc6.5反序列化依赖jar包
 
 - [快速开始](https://github.com/Bin4xin/bigger-than-bigger/tree/master/yonyou-nc6.5-lib#%E7%94%A8%E5%8F%8Bnc65%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E4%BE%9D%E8%B5%96jar%E5%8C%85)
 - 部分依赖jar包在安装完nc6.5系统后，一般在`C://yonyou//home//lib//`目录下，前提需要有nc6.5的安装包；或者下载仓库内的依赖包：
