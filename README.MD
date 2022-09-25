@@ -64,6 +64,30 @@
 https://raw.githubusercontent.com/Bin4xin/bigger-than-bigger/master/uBlacklist_LISTS/lists.txt
 ```
 
+### 6x01、robbyrussell.zsh-theme
+
+```bash
+declare -a expressions=(
+'📣What are Y0u f4cking barking.📣'
+'📣We are all F4CKING SMALL-TOWN SWOT (LOUDLY).📣'
+'~~APPEARANCE IS THE FIRST PRODUCTIVE FORCE~~;'
+)
+random_index=$(($RANDOM % ${#expressions[@]}))
+index=$((1 + $random_index))
+selected_expression=${expressions[index]}
+
+PROMPT="%(?:%{$fg_bold[green]%}[`echo $selected_expression`] :%{$fg_bold[red]%}[Ooooooops @@S0mething WROOONG@@] )"
+PROMPT+='%{$fg[cyan]%}[🤑🎧🚩:<%c>]%{$reset_color%}$(git_prompt_info) %{$fg_bold[white]%}$%{$fg_bold[green]%}$%{$fg_bold[yellow]%}$ '
+
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[yellow]%}[%{$fg_bold[blue]%}<git:%{$fg[red]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}%{$fg_bold[yellow]%}]"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}>%{$fg[yellow]%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%}>"
+```
+
+效果
+![assets/oh-my-zsh/oh-my-zsh.png](assets/oh-my-zsh/oh-my-zsh.png)
+
 # 注意/ATTENTION PLZ!!!
 
 - 1.由于传播、利用此库/文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，本文作者不为此承担任何责任。
