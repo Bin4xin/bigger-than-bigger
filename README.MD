@@ -58,11 +58,6 @@
 ### 5x01、*uBlacklist_LISTS*
 
 - 来源：[@YeSilin/uBlacklist](https://github.com/YeSilin/uBlacklist){:target="_blank"}
-- 订阅更新：
-
-```
-https://raw.githubusercontent.com/Bin4xin/bigger-than-bigger/master/uBlacklist_LISTS/lists.txt
-```
 
 ### 6x01、robbyrussell.zsh-theme
 
