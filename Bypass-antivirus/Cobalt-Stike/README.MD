@@ -24,15 +24,15 @@ golang版成功通过微软Defender/火绒免杀；
 
 - 火绒
 
-![2022-02-23-1.05.50.png](https://image.yjs2635.xyz/images/2022/02/24/2022-02-23-1.05.50.png)
+![2022-02-23-1.05.50.png](https://image.isisy.com/images/2022/02/24/2022-02-23-1.05.50.png)
 
 - 微软Defender
 
-![2022-02-23-1.28.27.png](https://image.yjs2635.xyz/images/2022/02/24/2022-02-23-1.28.27.png)
+![2022-02-23-1.28.27.png](https://image.isisy.com/images/2022/02/24/2022-02-23-1.28.27.png)
 
 ## 思路
 
-![2022-03-03-10.31.21.png](https://image.yjs2635.xyz/images/2022/03/03/2022-03-03-10.31.21.png)
+![2022-03-03-10.31.21.png](https://image.isisy.com/images/2022/03/03/2022-03-03-10.31.21.png)
 
 ### 梳理
 
