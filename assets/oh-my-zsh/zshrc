@@ -1,0 +1,67 @@
+#!/bin/bash
+# fileName should be: .zshrc
+# :D
+
+function show_banner() {
+    # 设置颜色
+    local cyan='\033[0;36m'
+    local red='\033[0;31m'
+    local yellow='\033[0;33m'
+    local green='\033[0;32m'
+    local white='\033[0;37m'
+    local reset='\033[0m'
+    local bold='\033[1m'
+    
+    echo -e "${cyan}   -------------------------------------------------------${reset}"
+    echo -e "${red}      SENTINEL Terminal - Penetration Testing Platform    ${reset}"
+    echo -e "${cyan}   -------------------------------------------------------${reset}"
+    echo ""
+    
+    local current_date=$(date "+%Y-%m-%d %H:%M:%S")
+    local hostname=$(hostname)
+    
+    echo -e "	${green}* Welcome, ${USER}.${reset}"
+    echo -e "	${green}* Host: ${hostname}${reset}"
+    echo -e "	${green}* Date: ${current_date}${reset}"
+    echo -e "	${green}* For: Authorized security professionals only${reset}"
+    echo -e "	${green}* Contact: Bin4xin@sentrylab.cn${reset}"
+    echo ""
+    
+    echo -e "${red}	WARNING: Unauthorized access or misuse is strictly${reset}"
+    echo -e "${red}	prohibited and will be prosecuted.${reset}"
+    echo -e "--------------------------------------------------${reset}"
+    echo ""
+}
+
+display_side_by_side() {
+    local term_width=$(tput cols)
+    local left_width=$((term_width / 2 - 2))
+    local neofetch_output banner_output
+    # neofetch --ascii_colors 2 3 1 1 5 4     
+    neofetch_output=$(neofetch -L 2>/dev/null)
+    banner_output=$(show_banner)
+
+    if command -v paste &>/dev/null; then
+        tmp1=$(mktemp)
+        tmp2=$(mktemp)
+        echo "$neofetch_output" | pr -t -o 2 -w "$left_width" > "$tmp1"
+        echo "$banner_output" | pr -t -o $((left_width + 4)) -w $((term_width - left_width - 4)) > "$tmp2"
+        paste "$tmp1" "$tmp2"
+        rm -f "$tmp1" "$tmp2"
+    else
+        local neofetch_lines=()
+        local banner_lines=()
+        while IFS= read -r line; do neofetch_lines+=("$line"); done <<< "$neofetch_output"
+        while IFS= read -r line; do banner_lines+=("$line"); done <<< "$banner_output"
+        local max_lines=$(( ${#neofetch_lines[@]} > ${#banner_lines[@]} ? ${#neofetch_lines[@]} : ${#banner_lines[@]} ))
+        for ((i=0; i<max_lines; i++)); do
+            printf "%-${left_width}s    %s\n" "${neofetch_lines[i]:-}" "${banner_lines[i]:-}"
+        done
+    fi
+}
+if [[ -o interactive ]]; then
+    display_side_by_side
+fi
+# =============================WARP STYLE WITH PROMPT IN ZSH===================================
+eval "$(starship init zsh)"
+# =============================WARP STYLE WITH PROMPT IN ZSH===================================
